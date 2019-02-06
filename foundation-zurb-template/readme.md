@@ -52,3 +52,6 @@ Execute "yarn run build" to build assets for production through the Docker image
 ```shell
 $ docker run --rm --pid=host -v ~/Sites/foundation-zurb-template:/opt fzt yarn run build
 ```
+
+## Usage tips:
+Use Yarn (not NPM) to add dependencies to package.json file: https://yarnpkg.com/lang/en/docs/cli/add/.
