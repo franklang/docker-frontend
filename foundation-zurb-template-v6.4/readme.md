@@ -37,16 +37,16 @@ $ rm -rf node_modules
 * Use manual setup (not Foundation CLI). See available commands here: https://github.com/zurb/foundation-zurb-template/tree/v6.4#manual-setup
 
 ```shell
-$ docker run --rm --pid=host -v ~/fzt64:/opt fzt64 npm install
+$ docker run --rm --pid=host -v ~/Sites/fzt64:/opt fzt64 npm install
 ```
 
 ```shell
-$ docker run --rm --pid=host -v ~/fzt64:/opt fzt64
+$ docker run --rm --pid=host -v ~/Sites/fzt64:/opt fzt64
 ```
 (= "npm start" command)
 
 ```shell
-$ docker run --rm --pid=host -v ~/fzt64:/opt fzt64 npm run build
+$ docker run --rm --pid=host -v ~/Sites/fzt64:/opt fzt64 npm run build
 ```
 (= build assets for production)
 
