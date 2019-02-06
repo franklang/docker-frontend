@@ -10,7 +10,6 @@ RUN apt-get install -y build-essential
 RUN apt-get install -y nodejs
 RUN apt-get install -y git-core
 RUN /usr/bin/npm install -g gulp
-RUN /usr/bin/npm install -g bower --allow-root
 
 VOLUME ["/opt"]
 CMD ["npm", "start"]
