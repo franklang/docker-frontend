@@ -33,15 +33,15 @@ $ rm -rf node_modules
 * Use manual setup (not Foundation CLI) and adapt commands accordingly (if needed): https://github.com/zurb/foundation-zurb-template/tree/master#manual-setup
 
 ```shell
-$ docker run --rm --pid=host -v ~/Sites/some-project:/opt fzt yarn
+$ docker run --rm --pid=host -v ~/Sites/foundation-zurb-template:/opt fzt yarn
 ```
 
 ```shell
-$ docker run --rm --pid=host -v ~/Sites/some-project:/opt fzt
+$ docker run --rm --pid=host -v ~/Sites/foundation-zurb-template:/opt fzt
 ```
 (= "yarn start" command)
 
 ```shell
-$ docker run --rm --pid=host -v ~/Sites/some-project:/opt fzt yarn run build
+$ docker run --rm --pid=host -v ~/Sites/foundation-zurb-template:/opt fzt yarn run build
 ```
 (= build assets for production)
