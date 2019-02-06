@@ -1,4 +1,6 @@
-Please note: there's no tagged version of the foundation-zurb-template, so I had to start from master branch. This means code is subject to changes.
+Please note:
+* there's no tagged version of the foundation-zurb-template, so I had to start from master branch. This means code is subject to changes.
+* Browsersync NOT working
 
 Make sure the Dockerfile follows those requirements or adapt accordingly: https://github.com/zurb/foundation-zurb-template/tree/master#installation
 
@@ -6,7 +8,7 @@ Make sure the Dockerfile follows those requirements or adapt accordingly: https:
 $ git clone https://github.com/zurb/foundation-zurb-template.git
 ```
 
-```json
+```shell
 $ cd foundation-zurb-template
 ```
 
@@ -20,27 +22,27 @@ function server(done) {
 }
 ```
 
-```json
+```shell
 $ docker build -t fzt .
 ```
 
-```json
+```shell
 $ rm -rf node_modules
 ```
 (add "sudo" if necessary)
 
 * Use manual setup (not Foundation CLI) and adapt commands accordingly (if needed): https://github.com/zurb/foundation-zurb-template/tree/master#manual-setup
 
-```json
+```shell
 $ docker run --rm --pid=host -v ~/Sites/some-project:/opt fzt yarn
 ```
 
-```json
+```shell
 $ docker run --rm --pid=host -v ~/Sites/some-project:/opt fzt
 ```
 (= "yarn start" command)
 
-```json
+```shell
 $ docker run --rm --pid=host -v ~/Sites/some-project:/opt fzt yarn run build
 ```
 (= build assets for production)
