@@ -2,8 +2,8 @@ FROM ubuntu:16.04
 
 WORKDIR /opt
 
-ADD setup_0.12 /tmp/setup_0.12
-RUN bash /tmp/setup_0.12
+ADD setup_8.x /tmp/setup_8.x
+RUN bash /tmp/setup_8.x
 
 RUN apt-get update
 RUN apt-get install -y build-essential
