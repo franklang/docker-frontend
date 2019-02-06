@@ -39,7 +39,7 @@ $ rm -rf node_modules
 
 Execute "npm install" command through the Docker image (do this once at start, then everytime a dependency is added to package.json file):
 ```shell
-$ docker run --rm --pid=host -v ~/Sites/fzt64:/opt fzt64 npm install
+$ docker run --rm --pid=host -v ~/path/to/fzt64:/opt fzt64 npm install
 ```
 
 This Docker image uses Foundation Zurb Template's manual setup (not Foundation CLI).
@@ -47,22 +47,22 @@ See available commands here: https://github.com/zurb/foundation-zurb-template/tr
 
 Execute "npm start" (Zurb Starter's base command) through the Docker image:
 ```shell
-$ docker run --rm --pid=host -v ~/Sites/fzt64:/opt fzt64
+$ docker run --rm --pid=host -v ~/path/to/fzt64:/opt fzt64
 ```
 
 Execute "npm run build" to build assets for production through the Docker image:
 ```shell
-$ docker run --rm --pid=host -v ~/Sites/fzt64:/opt fzt64 npm run build
+$ docker run --rm --pid=host -v ~/path/to/fzt64:/opt fzt64 npm run build
 ```
 
 Add Git repo as dependency (example with a tagged branch: https://github.com/kenwheeler/slick/tree/v1.8.1):
 ```shell
-$  docker run --rm --pid=host -v ~/Sites/fzt64:/opt fzt64 npm install --save kenwheeler/slick.git#v1.8.1
+$  docker run --rm --pid=host -v ~/path/to/fzt64:/opt fzt64 npm install --save kenwheeler/slick.git#v1.8.1
 ```
 
 Add new NPM package as dev dependency (example: https://www.npmjs.com/package/gulp-svg-sprite):
 ```shell
-$ docker run --rm --pid=host -v ~/Sites/fzt64:/opt fzt64 npm install --save-dev gulp-svg-sprite
+$ docker run --rm --pid=host -v ~/path/to/fzt64:/opt fzt64 npm install --save-dev gulp-svg-sprite
 ```
 
 Available NodeJS versions if any change is needed: https://github.com/nodesource/distributions/tree/master/deb
