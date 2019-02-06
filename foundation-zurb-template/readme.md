@@ -2,7 +2,8 @@ Please note:
 * there's no tagged version of the foundation-zurb-template, so I had to start from master branch. This means code is subject to changes.
 * Browsersync NOT working
 
-Make sure the Dockerfile follows those requirements or adapt accordingly: https://github.com/zurb/foundation-zurb-template/tree/master#installation
+Make sure the Dockerfile follows those requirements or edit accordingly: https://github.com/zurb/foundation-zurb-template/tree/master#installation
+(NodeJS (Version 6 or greater recommended, tested with 6.11.4 and 8.12.0) when creating the provided Dockerfile).
 
 ```shell
 $ git clone https://github.com/zurb/foundation-zurb-template.git
