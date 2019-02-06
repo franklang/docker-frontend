@@ -41,10 +41,6 @@ $ docker run --rm --pid=host -v ~/fzt64:/opt fzt64 npm install
 ```
 
 ```shell
-$ docker run --rm --pid=host -v ~/fzt64:/opt fzt64 bower install --allow-root
-```
-
-```shell
 $ docker run --rm --pid=host -v ~/fzt64:/opt fzt64
 ```
 (= "npm start" command)
