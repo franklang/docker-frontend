@@ -6,6 +6,15 @@ $ git clone --branch v6.4 https://github.com/zurb/foundation-zurb-template.git f
 $ cd fzt64
 ```
 
+Edit package.json to replace the following line:
+```json
+"gulp": "gulpjs/gulp#4.0",
+```
+by:
+```json
+"gulp": "git+https://github.com/gulpjs/gulp#v4.0.0",
+```
+
 Edit gulpfile.babel.js to add "open: false" parameter to "server" function:
 ```js
 // Start a server with BrowserSync to preview the site in
