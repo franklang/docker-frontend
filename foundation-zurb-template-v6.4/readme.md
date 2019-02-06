@@ -44,3 +44,5 @@ $ docker run --rm --pid=host -v ~/fzt64:/opt fzt64
 $ docker run --rm --pid=host -v ~/fzt64:/opt fzt64 npm run build
 ```
 (= build assets for production)
+
+Available NodeJS versions: https://github.com/nodesource/distributions/tree/master/deb
