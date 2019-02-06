@@ -2,6 +2,8 @@
 
 Make sure the Dockerfile follows the requirements (NodeJS version, Git...) or edit provided Dockerfile accordingly: https://github.com/zurb/foundation-zurb-template/tree/master#installation
 
+# Docker image: Foundation Zurb Template (starter) master branch
+
 ## Setup:
 Clone master branch of Git repository into "foundation-zurb-template" directory:
 ```shell
