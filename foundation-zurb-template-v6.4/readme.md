@@ -55,4 +55,14 @@ Execute "npm run build" to build assets for production through the Docker image:
 $ docker run --rm --pid=host -v ~/Sites/fzt64:/opt fzt64 npm run build
 ```
 
+Add Git repo as dependency (example with a tagged branch: https://github.com/kenwheeler/slick/tree/v1.8.1):
+```shell
+$  docker run --rm --pid=host -v ~/Sites/fzt64:/opt fzt64 npm install --save kenwheeler/slick.git#v1.8.1
+```
+
+Add new NPM package as dev dependency (example: https://www.npmjs.com/package/gulp-svg-sprite):
+```shell
+$ docker run --rm --pid=host -v ~/Sites/fzt64:/opt fzt64 npm install --save-dev gulp-svg-sprite
+```
+
 Available NodeJS versions if any change is needed: https://github.com/nodesource/distributions/tree/master/deb
