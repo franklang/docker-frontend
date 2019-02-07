@@ -6,7 +6,7 @@ We consider you have an existing root folder called "project". Unless noted othe
 ## Getting started
 
 ### Get Foundation Zurb Template's sources ready
-Clone v6.4 branch of the foundation-zurb-template Git repository in an "assets" folder:  
+Clone v6.4 branch of the foundation-zurb-template Git repository in an "assets" folder (in which we'll store our front-end source code to be processed):  
 ```shell
 $ git clone --branch v6.4 https://github.com/zurb/foundation-zurb-template.git assets
 ```
