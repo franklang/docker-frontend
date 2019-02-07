@@ -6,7 +6,7 @@ Clone v6.4 branch of Git repository into "fzt64" directory:
 $ git clone --branch v6.4 https://github.com/zurb/foundation-zurb-template.git fzt64
 ```
 
-*TODO* ICI voir pour récupérer également les sources de ce repo via une ligne de commande
+**TODO** ici voir pour récupérer également les sources de ce repo via une ligne de commande
 
 Enter "fzt64" directory:
 ```shell
