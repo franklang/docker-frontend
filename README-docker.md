@@ -1,11 +1,11 @@
 # Docker image: Foundation Zurb Template (starter) v6.4
 
+### Assumptions
+We consider you have an existing root folder called "project". Commands within this documentation have to be executed from the root of this "project" folder.
+
 ## Getting started
 
-### Assumptions
-**TODO** ...
-
-### Get Foundation Zurb Template sources ready
+### Get Foundation Zurb Template's sources ready
 Clone v6.4 branch of the foundation-zurb-template Git repository in an "assets" folder:  
 ```shell
 $ git clone --branch v6.4 https://github.com/zurb/foundation-zurb-template.git assets
