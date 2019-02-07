@@ -46,7 +46,7 @@ function server(done) {
 
 ## Setup
 
-Build the "fzt64" Docker image:
+Build an "fzt64" Docker image:
 ```shell
 $ docker build -t fzt64 .
 ```
