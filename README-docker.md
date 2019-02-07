@@ -81,7 +81,7 @@ Build an "fzt64" Docker image (this may take a few minutes):
 $ docker build -t fzt64 .
 ```
 
-You can check if your images have been created:
+You can check if your images have been correctly created:
 ```shell
 $ docker images
 ```
