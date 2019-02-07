@@ -75,7 +75,7 @@ $ rm -rf docker-frontend/
 
 ## Setup
 
-Enter your <front-end_source_code_folder>:
+Re-enter your <front-end_source_code_folder>:
 ```shell
 $ cd <front-end_source_code_folder>
 ```
