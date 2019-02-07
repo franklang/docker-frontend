@@ -3,11 +3,6 @@
 This project provides a Docker image to process front-end assets without the pain of having to deal with NodeJS/NPM local installation and version issues.  
 This particular branch is aimed at working with Foundation Zurb Template v6.4 sources.
 
-### Assumptions
---We consider you have an existing root folder called "project". Unless noted otherwise, commands within this documentation have to be executed from the root of this "project" folder.--
-
---This documentation assumes you'll make use of a bash to set and run everything up, but you might as well take advantage of your favorite OS's sexy user interface and facilities to get it to work.--
-
 ## Getting started
 
 Let's bring Foundation Zurb Template's source code and this Docker image to work together.
