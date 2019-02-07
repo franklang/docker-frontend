@@ -95,7 +95,7 @@ $ docker run --rm --pid=host -v ~/path/to/fzt64:/opt fzt64 npm install
 ...and we're finally ready to go!
 
 
-## Docker image available commands:
+## Docker image available commands
 
 This Docker image uses Foundation Zurb Template's manual setup (not Foundation CLI).
 See available commands here: https://github.com/zurb/foundation-zurb-template/tree/v6.4#manual-setup
@@ -111,11 +111,11 @@ $ docker run --rm --pid=host -v ~/path/to/fzt64:/opt fzt64 npm run build
 ```
 
 
-## Usage tips:
+## Usage tips
 
-Add new Git repo as dependency into "package.json" file (example with a tagged branch: https://github.com/kenwheeler/slick/tree/v1.8.1):
+Add new Git repo as dependency into "package.json" file (example with a tagged branch: https://github.com/jquery/jquery-ui/tree/1.12.1):
 ```shell
-$  docker run --rm --pid=host -v ~/path/to/fzt64:/opt fzt64 npm install --save kenwheeler/slick.git#v1.8.1
+$  docker run --rm --pid=host -v ~/path/to/fzt64:/opt fzt64 npm install --save jquery/jquery-ui.git#v1.12.1
 ```
 
 Add new NPM package as dev dependency into "package.json" file (example: https://www.npmjs.com/package/gulp-svg-sprite):
