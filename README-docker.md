@@ -1,6 +1,6 @@
-**Please note:** this Docker image uses source code from the master branch of Foundation Zurb Template's project. This means code and commands are subject to major changes over time. Thus it might be a better idea to use an image based on a [specific branch](https://github.com/franklang/docker-frontend).
+**Please note:** this Docker image uses source code from the master branch of Foundation Zurb Template's project. This means code and commands are subject to daily and major changes over time. Thus it is not a good idea to start developing you site or application on this base. Better use an image based on any of the other [specific branch](https://github.com/franklang/docker-frontend).
 
-You can use this branch for testing purpose or as a starting point if you want to create a Docker image for a further release.
+You can use this branch for testing purpose or as a starting point if you want to create a Docker image for a further Foundation Zurb Template release. But you'll probably have to adapt Dockerfile accordingly.
 
 
 # Docker image to process Foundation Zurb Template (starter) v6.4 front-end assets
