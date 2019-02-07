@@ -1,7 +1,7 @@
 # Docker image: Foundation Zurb Template (starter) v6.4
 
 ### Assumptions
-We consider you have an existing root folder called "project". Commands within this documentation have to be executed from the root of this "project" folder.
+We consider you have an existing root folder called "project". Unless noted otherwise, commands within this documentation have to be executed from the root of this "project" folder.
 
 ## Getting started
 
