@@ -1,4 +1,4 @@
-# Docker images to compile Front-End assets
+# NodeJS/NPM based Docker images to compile Front-End assets
 
 This project provides Docker images designed to help processing front-end assets without the pain of having to deal with NodeJS/NPM local installation and version issues.
 
