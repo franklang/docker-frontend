@@ -99,7 +99,7 @@ $ rm -rf node_modules
 
 Execute "npm install" command through the Docker image (do this once at start, then everytime a dependency is added to package.json file):
 ```shell
-$ docker run --rm --pid=host -v ~/path/to/fzt64:/opt fzt64 npm install
+$ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fzt64 npm install
 ```
 
 ...and we're finally ready to go!
