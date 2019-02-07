@@ -4,6 +4,11 @@ This project provides Docker images designed to help processing front-end assets
 This particular branch is aimed at working with Foundation Zurb Template v6.4 sources.
 
 
+## Prerequisites:
+* Git installed
+* Docker installed
+
+
 ## Getting started
 
 Let's bring Foundation Zurb Template's source code and this Docker image to work together.
