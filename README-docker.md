@@ -76,9 +76,19 @@ $ cd <front-end_source_code_folder>
 ```
 
 ### Build Docker image
-Build an "fzt64" Docker image:
+Build an "fzt64" Docker image (this may take a few minutes):
 ```shell
 $ docker build -t fzt64 .
+```
+
+You can check if your images have been created:
+```shell
+$ docker images
+```
+```shell
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+fzt64               latest              6841c695963f        50 seconds ago      494MB
+ubuntu              16.04               7e87e2b3bf7a        2 weeks ago         117MB
 ```
 
 ### Make sure you start with clean NodeJS dependencies
