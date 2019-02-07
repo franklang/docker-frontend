@@ -115,12 +115,14 @@ $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fz
 This Docker image uses Foundation Zurb Template's manual setup (not Foundation CLI).
 See available commands here: https://github.com/zurb/foundation-zurb-template/tree/v6.4#manual-setup
 
-Execute "npm start" (Zurb Starter's base command) through the Docker image:
+* Execute "npm start" (Zurb Starter's base command) through the Docker image:
 ```shell
 $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fzt64
 ```
 
-Execute "npm run build" to build assets for production through the Docker image:
+If you've executed this command for the first time, it should have created a "dist" folder at the root of your <front-end_source_code_folder>.
+
+* Execute "npm run build" to build assets for production through the Docker image:
 ```shell
 $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fzt64 npm run build
 ```
@@ -128,12 +130,12 @@ $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fz
 
 ## Usage tips
 
-Add new Git repo as dependency into "package.json" file (example with a tagged branch: https://github.com/jquery/jquery-ui/tree/1.12.1):
+* Add new Git repo as dependency into "package.json" file (example with a tagged branch: https://github.com/jquery/jquery-ui/tree/1.12.1):
 ```shell
 $  docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fzt64 npm install --save jquery/jquery-ui.git#v1.12.1
 ```
 
-Add new NPM package as dev dependency into "package.json" file (example: https://www.npmjs.com/package/gulp-svg-sprite):
+* Add new NPM package as dev dependency into "package.json" file (example: https://www.npmjs.com/package/gulp-svg-sprite):
 ```shell
 $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fzt64 npm install --save-dev gulp-svg-sprite
 ```
