@@ -120,7 +120,7 @@ See available commands here: https://github.com/zurb/foundation-zurb-template/tr
 $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fzt64
 ```
 
-If you've executed this command for the first time, it should have created a "dist" folder at the root of your <front-end_source_code_folder>.
+If you've executed this command for the first time, it should have created a "dist" folder at the root of your <front-end_source_code_folder>. This "dist" folder contains your processed front-end assets.
 
 * Execute "npm run build" to build assets for production through the Docker image:
 ```shell
