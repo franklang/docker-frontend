@@ -1,21 +1,38 @@
-**Please note:** this Docker image uses source code from the master branch of Foundation Zurb Template's project. This means code and commands are subject to major changes over time. Thus it might be a better idea to use an image based on a specific branch.
+**Please note:** this Docker image uses source code from the master branch of Foundation Zurb Template's project. This means code and commands are subject to major changes over time. Thus it might be a better idea to use an image based on a [specific branch]().
 
-Make sure the Dockerfile follows the requirements (NodeJS version, Git...) or edit provided Dockerfile accordingly: https://github.com/zurb/foundation-zurb-template/tree/master#installation
 
-# Docker image: Foundation Zurb Template (starter) master branch
+# Docker image to process Foundation Zurb Template (starter) v6.4 front-end assets
 
-## Setup:
-Clone master branch of Git repository into "foundation-zurb-template" directory:
+This project provides Docker images designed to help processing front-end assets without the pain of having to deal with NodeJS/NPM local installation and version issues.  
+This particular branch is aimed at working with Foundation Zurb Template v6.4 sources.
+
+
+## Prerequisites
+* Git installed
+* Docker installed
+
+
+## Getting started
+
+Let's bring Foundation Zurb Template's source code and this Docker image to work together.
+
+### Get Foundation Zurb Template's sources ready!
+Clone master branch of the foundation-zurb-template Git repository in a folder in which you'll store the front-end source code to be processed: 
 ```shell
-$ git clone https://github.com/zurb/foundation-zurb-template.git
+$ git clone https://github.com/zurb/foundation-zurb-template.git <front-end_source_code_folder>
 ```
 
-Enter "foundation-zurb-template" directory:
+Enter generated folder:
 ```shell
-$ cd foundation-zurb-template
+$ cd <front-end_source_code_folder>
 ```
 
-Edit gulpfile.babel.js to add "open: false" parameter to "server" function:
+At this point, you probably want to remove the ".git" folder since you won't be contributing to the Foundation Zurb Template project (no, not this time):
+```shell
+$ rm -rf .git
+```
+
+Edit "gulpfile.babel.js" file to add "open: false" parameter to "server" function:
 ```js
 // Start a server with BrowserSync to preview the site in
 function server(done) {
@@ -25,33 +42,85 @@ function server(done) {
 }
 ```
 
-Build a Docker image labelled as "fzt":
+### Get Docker image for processing front-end assets ready!
+We now have to get the Docker image source code to the root of the folder we previously created to store the front-end source code to be processed.
+
+Exit your <front-end_source_code_folder>:
 ```shell
-$ docker build -t fzt .
+$ cd ..
 ```
 
-Remove existing "node_modules" directory, if any (add "sudo" if necessary):
+Clone foundation-zurb-template-master branch of the docker-frontend Git repository:
+```shell
+$ git clone --branch foundation-zurb-template-master https://github.com/franklang/docker-frontend.git
+```
+
+Move content of the previously cloned repository to your <front-end_source_code_folder>:
+```shell
+$ mv docker-frontend/* <front-end_source_code_folder>/
+```
+
+Remove remaining "docker-frontend" folder:
+```shell
+$ rm -rf docker-frontend/
+```
+
+
+## Setup
+
+Re-enter your <front-end_source_code_folder>:
+```shell
+$ cd <front-end_source_code_folder>
+```
+
+### Build Docker image
+Build an "fztm" Docker image (this may take a few minutes):
+```shell
+$ docker build -t fztm .
+```
+
+You can check if your images have been correctly created:
+```shell
+$ docker images
+```
+```shell
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+fztm                latest              6841c695963f        50 seconds ago      494MB
+ubuntu              16.04               7e87e2b3bf7a        2 weeks ago         117MB
+```
+
+### Make sure you start with clean NodeJS dependencies
+Remove existing "node_modules" folder, if any (add "sudo" in front of the command if necessary):
 ```shell
 $ rm -rf node_modules
 ```
 
-## Available commands:
 Execute "yarn" command through the Docker image (do this once at start, then everytime a dependency is added to package.json file):
 ```shell
-$ docker run --rm --pid=host -v ~/Sites/foundation-zurb-template:/opt fzt yarn
+$ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fzt yarn
 ```
 
-This Docker image uses Foundation Zurb Template's manual setup (not Foundation CLI). See available commands here: https://github.com/zurb/foundation-zurb-template#manual-setup
+...and we're finally ready to go!
 
-Execute "yarn start" (Zurb Starter's base command) through the Docker image:
+
+## Docker image available commands
+
+This Docker image uses Foundation Zurb Template's manual setup (not Foundation CLI).
+See available commands here: https://github.com/zurb/foundation-zurb-template/tree/master#manual-setup
+
+* Execute "yarn start" (Zurb Starter's base command) through the Docker image:
 ```shell
-$ docker run --rm --pid=host -v ~/Sites/foundation-zurb-template:/opt fzt
+$ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fztm
 ```
 
-Execute "yarn run build" to build assets for production through the Docker image:
+If you've executed this command for the first time, it should have created a "dist" folder at the root of your <front-end_source_code_folder>. This "dist" folder contains your processed front-end assets.
+
+* Execute "yarn run build" to build assets for production through the Docker image:
 ```shell
-$ docker run --rm --pid=host -v ~/Sites/foundation-zurb-template:/opt fzt yarn run build
+$ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fztm yarn run build
 ```
 
-## Usage tips:
-Use Yarn (not NPM) to add dependencies to package.json file: https://yarnpkg.com/lang/en/docs/cli/add/.
+
+## Usage tips
+
+* Use Yarn (not NPM) to add dependencies to package.json file: https://yarnpkg.com/lang/en/docs/cli/add/.
