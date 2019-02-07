@@ -4,29 +4,31 @@ This project provides a Docker image to process front-end assets without the pai
 This particular branch is aimed at working with Foundation Zurb Template v6.4 sources.
 
 ### Assumptions
-We consider you have an existing root folder called "project". Unless noted otherwise, commands within this documentation have to be executed from the root of this "project" folder.
+-We consider you have an existing root folder called "project". Unless noted otherwise, commands within this documentation have to be executed from the root of this "project" folder.-
 
 ## Getting started
 
-Let's bring Foundation Zurb Template's source code and the Docker image to work together.
+Let's bring Foundation Zurb Template's source code and this Docker image to work together.
 
 ### Get Foundation Zurb Template's sources ready
-From the root of you "project" folder, clone v6.4 branch of the foundation-zurb-template Git repository in an "assets" folder (in which we'll store our front-end source code to be processed):  
+
+Clone v6.4 branch of the foundation-zurb-template Git repository in a folder in which you'll store the front-end source code to be processed: 
 ```shell
-$ git clone --branch v6.4 https://github.com/zurb/foundation-zurb-template.git assets
+$ git clone --branch v6.4 https://github.com/zurb/foundation-zurb-template.git <front-end_source_code_folder>
 ```
 
-Enter "assets" folder:
+Enter generated folder:
 ```shell
-$ cd assets
+$ cd <front-end_source_code_folder>
 ```
 
-At this point, you probably want to remove the ".git" folder:
+At this point, you probably want to remove the ".git" folder since you won't be contributing to the Foundation Zurb Template project (no, not this time):
 ```shell
 $ rm -rf .git
 ```
 
 Edit "package.json" file to replace the following line:
+(v6.4 known issue workaround: https://github.com/zurb/foundation-cli/issues/109) 
 ```json
 "gulp": "gulpjs/gulp#4.0",
 ```
