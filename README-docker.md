@@ -1,19 +1,27 @@
 # Docker image: Foundation Zurb Template (starter) v6.4
 
-## Setup:
-Clone v6.4 branch of Git repository into "fzt64" directory:  
+## Getting started
+
+### Assumptions
+**TODO** ...
+
+### Get Foundation Zurb Template sources ready
+Clone v6.4 branch of the foundation-zurb-template Git repository in an "assets" folder:  
 ```shell
-$ git clone --branch v6.4 https://github.com/zurb/foundation-zurb-template.git fzt64
+$ git clone --branch v6.4 https://github.com/zurb/foundation-zurb-template.git assets
 ```
 
-**TODO** ici voir pour récupérer également les sources de ce repo via une ligne de commande
-
-Enter "fzt64" directory:
+Enter "assets" folder:
 ```shell
-$ cd fzt64
+$ cd assets
 ```
 
-Edit package.json to replace the following line:
+At this point, you probably want to remove the ".git" folder:
+```shell
+$ rm -rf .git
+```
+
+Edit "package.json" file to replace the following line:
 ```json
 "gulp": "gulpjs/gulp#4.0",
 ```
@@ -22,7 +30,7 @@ by:
 "gulp": "git+https://github.com/gulpjs/gulp#v4.0.0",
 ```
 
-Edit gulpfile.babel.js to add "open: false" parameter to "server" function:
+Edit "gulpfile.babel.js" file to add "open: false" parameter to "server" function:
 ```js
 // Start a server with BrowserSync to preview the site in
 function server(done) {
@@ -32,21 +40,28 @@ function server(done) {
 }
 ```
 
-Build Docker image:
+### Get Docker image for processing front-end assets ready
+
+**TODO**
+
+## Setup
+
+Build the "fzt64" Docker image:
 ```shell
 $ docker build -t fzt64 .
 ```
 
-Remove existing "node_modules" directory, if any (add "sudo" if necessary):
+Remove existing "node_modules" folder, if any (add "sudo" in front of the command if necessary):
 ```shell
 $ rm -rf node_modules
 ```
 
-## Available commands:
 Execute "npm install" command through the Docker image (do this once at start, then everytime a dependency is added to package.json file):
 ```shell
 $ docker run --rm --pid=host -v ~/path/to/fzt64:/opt fzt64 npm install
 ```
+
+## Docker image available commands:
 
 This Docker image uses Foundation Zurb Template's manual setup (not Foundation CLI).
 See available commands here: https://github.com/zurb/foundation-zurb-template/tree/v6.4#manual-setup
@@ -62,12 +77,12 @@ $ docker run --rm --pid=host -v ~/path/to/fzt64:/opt fzt64 npm run build
 ```
 
 ## Usage tips: 
-* Add Git repo as dependency (example with a tagged branch: https://github.com/kenwheeler/slick/tree/v1.8.1):
+* Add new Git repo as dependency into "package.json" file (example with a tagged branch: https://github.com/kenwheeler/slick/tree/v1.8.1):
 ```shell
 $  docker run --rm --pid=host -v ~/path/to/fzt64:/opt fzt64 npm install --save kenwheeler/slick.git#v1.8.1
 ```
 
-* Add new NPM package as dev dependency (example: https://www.npmjs.com/package/gulp-svg-sprite):
+* Add new NPM package as dev dependency into "package.json" file (example: https://www.npmjs.com/package/gulp-svg-sprite):
 ```shell
 $ docker run --rm --pid=host -v ~/path/to/fzt64:/opt fzt64 npm install --save-dev gulp-svg-sprite
 ```
