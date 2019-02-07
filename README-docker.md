@@ -4,7 +4,9 @@ This project provides a Docker image to process front-end assets without the pai
 This particular branch is aimed at working with Foundation Zurb Template v6.4 sources.
 
 ### Assumptions
--We consider you have an existing root folder called "project". Unless noted otherwise, commands within this documentation have to be executed from the root of this "project" folder.-
+--We consider you have an existing root folder called "project". Unless noted otherwise, commands within this documentation have to be executed from the root of this "project" folder.--
+
+--This documentation assumes you'll make use of a bash to set and run everything up, but you might as well take advantage of your favorite OS's sexy user interface and facilities to get it to work.--
 
 ## Getting started
 
@@ -49,9 +51,34 @@ function server(done) {
 
 ### Get Docker image for processing front-end assets ready
 
-**TODO**
+We now have to get the Docker image source code to the root of the folder we previously created to store the front-end source code to be processed.
+
+Exit your <front-end_source_code_folder>:
+```shell
+$ cd ..
+```
+
+Clone foundation-zurb-template-v6.4 branch of the docker-frontend Git repository:
+```shell
+$ git clone --branch foundation-zurb-template-v6.4 https://github.com/franklang/docker-frontend.git
+```
+
+Move content of the previously cloned repository to your <front-end_source_code_folder>:
+```shell
+$ mv docker-frontend/* <front-end_source_code_folder>/
+```
+
+Remove remaining "docker-frontend" folder:
+```shell
+$ rm -rf docker-frontend/
+```
 
 ## Setup
+
+Enter your <front-end_source_code_folder>:
+```shell
+$ cd <front-end_source_code_folder>
+```
 
 Build an "fzt64" Docker image:
 ```shell
