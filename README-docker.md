@@ -87,7 +87,7 @@ Remove existing "node_modules" folder, if any (add "sudo" in front of the comman
 $ rm -rf node_modules
 ```
 
-Execute "yarn" command through the Docker image (do this once at start, then everytime a dependency is added to package.json file):
+Execute "yarn" command through the Docker image to get all needed project dependencies (this will generate a fresh "node_modules" folder - do this once at start, then everytime a dependency is added to package.json file):
 ```shell
 $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fztm yarn
 ```
