@@ -17,6 +17,18 @@ Browse project branches to find about covered Front-End frameworks and their ver
 
 Available NodeJS versions if any change is needed: https://github.com/nodesource/distributions/tree/master/deb.
 
+**Remember to use the raw URL given by Git in your script to avoid code formatting or line ending issues!**
+
+GOOD:
+```shell
+curl -s https://raw.githubusercontent.com/nodesource/distributions/master/deb/setup_6.x
+```
+
+BAD:
+```shell
+curl -s https://github.com/nodesource/distributions/blob/master/deb/setup_6.x
+```
+
 _more to come..._
 
 
