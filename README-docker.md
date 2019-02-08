@@ -5,8 +5,8 @@ This particular branch is aimed at working with Foundation Zurb Template v6.4 so
 
 
 ## Prerequisites
-* Git installed
-* Docker installed
+* [Docker installed](https://docs.docker.com/install/)
+* [Git installed](https://git-scm.com/downloads)
 
 
 ## Getting started
