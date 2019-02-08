@@ -10,8 +10,8 @@ This particular branch is aimed at working with Foundation Zurb Template MASTER 
 
 
 ## Prerequisites
-* Git installed
-* Docker installed
+* [Docker installed](https://docs.docker.com/install/)
+* [Git installed](https://git-scm.com/downloads)
 
 
 ## Getting started
