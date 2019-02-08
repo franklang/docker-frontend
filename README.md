@@ -6,11 +6,23 @@ Browse project branches to find about covered Front-End frameworks and their ver
 * [Foundation Zurb Template - branch "master"](https://github.com/franklang/docker-frontend/tree/foundation-zurb-template-master)
 * [Foundation Zurb Template - branch "v6.4"](https://github.com/franklang/docker-frontend/tree/foundation-zurb-template-v6.4)
 
-Available NodeJS versions if any change is needed: https://github.com/nodesource/distributions/tree/master/deb
 
-## Troubleshooting:
+## Common prerequisites
 
-### Build error:
+* [Docker installed](https://docs.docker.com/install/)
+* [Git installed](https://git-scm.com/downloads)
+
+
+## Customize existing image or build your own
+
+Available NodeJS versions if any change is needed: https://github.com/nodesource/distributions/tree/master/deb.
+
+_more to come..._
+
+
+## Common troubleshooting
+
+### Build error
 
 Whenever you run an "npm install" command, look at the logs and if you see something like this:
 ```shell
