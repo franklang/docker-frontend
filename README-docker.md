@@ -6,7 +6,7 @@ You can use this branch for testing purpose or as a starting point if you want t
 # Docker image to process Foundation Zurb Template (starter) MASTER branch front-end assets
 
 This project provides Docker images designed to help processing front-end assets without the pain of having to deal with NodeJS/NPM local installation and package version issues.  
-This particular branch is aimed at working with Foundation Zurb Template MASTER branch sources.
+This particular branch is aimed at working with [Foundation Zurb Template MASTER branch sources](https://github.com/zurb/foundation-zurb-template).
 
 
 ## Prerequisites
