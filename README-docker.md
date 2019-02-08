@@ -116,3 +116,14 @@ $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fz
 ## Usage tips
 
 * Use Yarn (not NPM) to add dependencies to package.json file: https://yarnpkg.com/lang/en/docs/cli/add/.
+
+* Add new Git repo as dependency into "package.json" file (example with a tagged branch: https://github.com/jquery/jquery-ui/tree/1.12.1):
+```shell
+$  docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fzt64 yarn add jquery/jquery-ui.git#v1.12.1
+```
+
+* Add new NPM package as dev dependency into "package.json" file (example: https://www.npmjs.com/package/gulp-svg-sprite):
+```shell
+$ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fzt64 yarn add --dev gulp-svg-sprite
+```
+
