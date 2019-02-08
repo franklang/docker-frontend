@@ -1,6 +1,6 @@
 # NodeJS/NPM based Docker images to compile Front-End assets
 
-This project provides Docker images designed to help processing front-end assets without the pain of having to deal with NodeJS/NPM local installation and version issues.
+This project provides Docker images designed to help processing front-end assets without the pain of having to deal with NodeJS/NPM local installation and package version issues.
 
 Browse project branches to find about covered Front-End frameworks and their versions:
 * [Foundation Zurb Template - branch "master"](https://github.com/franklang/docker-frontend/tree/foundation-zurb-template-master)
