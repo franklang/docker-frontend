@@ -1,12 +1,12 @@
-**Please note:** this Docker image uses source code from the master branch of Foundation Zurb Template's project. This means code and commands are subject to daily and major changes over time. Thus it is not a good idea to start developing you site or application on this base. Better use a Docker image based on any of the other [specific branch](https://github.com/franklang/docker-frontend).
+**Please note:** this Docker image uses source code from the master branch of Foundation Zurb Template's project. This means code and commands are subject to daily and major changes over time. Thus it is not a good idea to start developing you site or application on this base. Better use a Docker image based on any of the other [specific branch labelled with a version number](https://github.com/franklang/docker-frontend).
 
 You can use this branch for testing purpose or as a starting point if you want to create a Docker image for a further Foundation Zurb Template release. But you'll most probably have to adapt Dockerfile accordingly.
 
 
-# Docker image to process Foundation Zurb Template (starter) v6.4 front-end assets
+# Docker image to process Foundation Zurb Template (starter) MASTER branch front-end assets
 
 This project provides Docker images designed to help processing front-end assets without the pain of having to deal with NodeJS/NPM local installation and version issues.  
-This particular branch is aimed at working with Foundation Zurb Template v6.4 sources.
+This particular branch is aimed at working with Foundation Zurb Template MASTER branch sources.
 
 
 ## Prerequisites
@@ -81,16 +81,6 @@ Build an "fztm" Docker image (this may take a few minutes):
 $ docker build -t fztm .
 ```
 
-You can check if your images have been correctly created:
-```shell
-$ docker images
-```
-```shell
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-fztm                latest              6841c695963f        50 seconds ago      494MB
-ubuntu              16.04               7e87e2b3bf7a        2 weeks ago         117MB
-```
-
 ### Make sure you start with clean NodeJS dependencies
 Remove existing "node_modules" folder, if any (add "sudo" in front of the command if necessary):
 ```shell
@@ -99,7 +89,7 @@ $ rm -rf node_modules
 
 Execute "yarn" command through the Docker image (do this once at start, then everytime a dependency is added to package.json file):
 ```shell
-$ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fzt yarn
+$ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fztm yarn
 ```
 
 ...and we're finally ready to go!
