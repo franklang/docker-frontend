@@ -1,7 +1,7 @@
 # Docker image to process Foundation Zurb Template (starter) v6.4 front-end assets
 
 This project provides Docker images designed to help processing front-end assets without the pain of having to deal with NodeJS/NPM local installation and package version issues.  
-This particular branch is aimed at working with Foundation Zurb Template v6.4 sources.
+This particular branch is aimed at working with [Foundation Zurb Template v6.4 sources](https://github.com/zurb/foundation-zurb-template/tree/v6.4).
 
 
 ## Prerequisites
