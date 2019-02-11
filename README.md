@@ -32,6 +32,14 @@ curl -s https://github.com/nodesource/distributions/blob/master/deb/setup_6.x
 _more to come..._
 
 
+## Docker Tips and tricks
+
+Open a bash to execute commands inside of a Docker image (type "exit" to quit):
+```shell
+docker run --rm -it <image_name> bash
+```
+
+
 ## Common troubleshooting
 
 ### Build error
