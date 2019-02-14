@@ -12,19 +12,19 @@ This particular branch is aimed at working with [Foundation Zurb Template v6.4 s
 ## Getting started
 
 Let's bring Foundation Zurb Template's source code and this Docker image to work together.
-Two ways of getting this Docker image:
-* Pulling it from Docker Hub
-* Clone it from this GitHub repository/branch
+
+There are two ways of using this image, depending on your needs:
+* [Pulling it directly from Docker Hub](#docker-pull) (faster, but you'll only be able to use the image as is)
+* [Clone it from this Github repository/branch to your local development environment](#git-clone) (slower, as you'll have to build the image manually, but you'll be able to customize it to suit your project species and save it for further use)
 
 
-## Running this Docker image from the Docker Hub
-[Docker Hub repository for Foundation Zurb Template v6.4 branch Docker image](https://cloud.docker.com/repository/docker/franklang/fzt64)
+## <a name="docker-pull"></a>Pull image from Docker Hub
 
 ```shell
 $ docker pull franklang/fzt64
 ```
 
-### Available commands:
+### Docker image available commands
 
 * npm install
 ```shell
@@ -36,8 +36,9 @@ $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt fr
 $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt franklang/fzt64
 ```
 
-## Running this Docker image locally
-The Dockerfile is stored locally on your computer.
+
+## <a name="git-clone"></a>Clone image from Github repository
+The Dockerfile will be stored locally on your computer.
 
 ### Get Foundation Zurb Template's sources ready!
 Clone v6.4 branch of the foundation-zurb-template Git repository in a folder in which you'll store the front-end source code to be processed: 
