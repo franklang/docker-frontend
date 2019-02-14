@@ -18,7 +18,7 @@ There are two ways of using this image, depending on your needs:
 * [Cloning it from this Github repository/branch to your local development environment](#git-clone) (slower, as you'll have to build the image manually, but you'll be able to customize it to suit your project species and save it for further use)
 
 
-## <a name="docker-pull"></a>Pull image from Docker Hub
+## <a name="docker-pull"></a>Solution #1. Pull image from Docker Hub
 
 Execute:
 ```shell
@@ -34,10 +34,12 @@ REPOSITORY                    TAG                 IMAGE ID            CREATED   
 franklang/fzt64               latest              6841c695963f        50 seconds ago      494MB
 ```
 
-From now on, whenever you see a _<REPOSITORY_name>_ mention in a command, it refers to the pulled image's name: _franklang/fzt64_. [Check here for available commands](#available-commands).
+From now on, whenever you see a _<REPOSITORY_name>_ mention in this documentation, it refers to the pulled image's name: _franklang/fzt64_. [Check here for available commands](#available-commands).
+
+**But wait!** We still [need to do a couple of minor modifications to Foundation's provided configuration files](#before-you-start) before we can start using this Docker image properly! 
 
 
-## <a name="git-clone"></a>Clone image from Github repository
+## <a name="git-clone"></a>Solution #2. Clone image from Github repository
 
 ### Get Foundation Zurb Template's sources ready!
 Clone v6.4 branch of the foundation-zurb-template Git repository in a folder in which you'll store the front-end source code to be processed: 
@@ -101,12 +103,12 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 fzt64               latest              6841c695963f        50 seconds ago      494MB
 ```
 
-From now on, whenever you see a _<REPOSITORY_name>_ mention in a command, it refers to the cloned image's name: _fzt64_. [Check here for available commands](#available-commands).
+From now on, whenever you see a _<REPOSITORY_name>_ mention in this document, it refers to the cloned image's name: _fzt64_. [Check here for available commands](#available-commands).
 
 
-## Before you start processing your assets...
+## <a href="before-you-start"></a>Before you start processing your assets...
 
-### Bring a couple of necessary modifications to Foundation's configuration files
+### Bring a couple of minor (but necessary) modifications to Foundation's configuration files
 Enter your <front-end_source_code_folder>:
 (files like _gulpfile.babel.js_ and _package.json_ must be located at the root of this folder!)
 ```shell
