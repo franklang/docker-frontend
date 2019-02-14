@@ -34,7 +34,10 @@ _more to come..._
 
 ## Docker Tips and tricks
 
-* [Remove one or more Docker image(s)](https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks/#removing-docker-images)
+* [Remove one or more Docker image(s)](https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks/#removing-docker-images):
+```shell
+docker image rm <image_ID> --force
+```
 
 * Open a bash to execute commands inside of a Docker image (type "exit" to quit):
 ```shell
