@@ -106,7 +106,7 @@ fzt64               latest              6841c695963f        50 seconds ago      
 From now on, whenever you see a _<REPOSITORY_name>_ mention in this document, it refers to the cloned image's name: _fzt64_. [Check here for available commands](#available-commands).
 
 
-## <a href="before-you-start"></a>Before you start processing your assets...
+## <a name="before-you-start"></a>Before you start processing your assets...
 
 ### Bring a couple of minor (but necessary) modifications to Foundation's configuration files
 Enter your <front-end_source_code_folder>:
@@ -149,7 +149,7 @@ $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt <R
 ...and we're finally ready to go!
 
 
-## <a href="available-commands"></a>List of available commands
+## <a name="available-commands"></a>List of available commands
 
 This Docker image uses Foundation Zurb Template's manual setup (not Foundation CLI).
 See available commands here: https://github.com/zurb/foundation-zurb-template/tree/v6.4#manual-setup
