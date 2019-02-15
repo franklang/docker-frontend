@@ -39,7 +39,7 @@ REPOSITORY                    TAG                 IMAGE ID            CREATED   
 franklang/fztm                latest              6841c695963f        50 seconds ago      494MB
 ```
 
-From now on, whenever you see a _<REPOSITORY_name>_ mention in this documentation, it refers to the pulled image's name: _franklang/fztm_. [Check here for available commands](#available-commands).
+From now on, whenever you see a `<REPOSITORY_name>` mention in this documentation, it refers to the pulled image's name: _franklang/fztm_. [Check here for available commands](#available-commands).
 
 **But wait!** We still [need to do a couple of minor modifications to Foundation's provided configuration files](#before-you-start) before we can start using this Docker image properly! 
 
@@ -57,7 +57,7 @@ Enter generated folder:
 $ cd <front-end_source_code_folder>
 ```
 
-At this point, you probably want to remove the ".git" folder since you won't be contributing to the Foundation Zurb Template project (no, not this time):
+At this point, you probably want to remove the _.git_ folder since you won't be contributing to the Foundation Zurb Template project (no, not this time):
 ```shell
 $ rm -rf .git
 ```
@@ -70,7 +70,7 @@ Exit your <front-end_source_code_folder>:
 $ cd ..
 ```
 
-Clone foundation-zurb-template-master branch of the docker-frontend Git repository:
+Clone _foundation-zurb-template-master_ branch of the _docker-frontend_ Git repository:
 ```shell
 $ git clone --branch foundation-zurb-template-master https://github.com/franklang/docker-frontend.git
 ```
@@ -80,7 +80,7 @@ Move content of the previously cloned repository to your <front-end_source_code_
 $ mv docker-frontend/* <front-end_source_code_folder>/
 ```
 
-Remove remaining "docker-frontend" folder:
+Remove remaining _docker-frontend_ folder:
 ```shell
 $ rm -rf docker-frontend/
 ```
@@ -94,7 +94,7 @@ $ cd <front-end_source_code_folder>
 ```
 
 #### Build Docker image
-Build an "fztm" Docker image (this may take a few minutes):
+Build an `fztm` Docker image (this may take a few minutes):
 ```shell
 $ docker build -t fztm .
 ```
@@ -108,19 +108,19 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 fztm                latest              6841c695963f        50 seconds ago      494MB
 ```
 
-From now on, whenever you see a _<REPOSITORY_name>_ mention in this document, it refers to the cloned image's name: _fztm_. [Check here for available commands](#available-commands).
+From now on, whenever you see a `<REPOSITORY_name>` mention in this document, it refers to the cloned image's name: _fztm_. [Check here for available commands](#available-commands).
 
 
 ## <a name="before-you-start"></a>Before you start processing your assets...
 
 ### Bring a couple of minor (but necessary) modifications to Foundation's configuration files
 Enter your <front-end_source_code_folder>:
-(files like _gulpfile.babel.js_ and _package.json_ must be located at the root of this folder!)
+(files like `gulpfile.babel.js` and `package.json` must be located at the root of this folder!)
 ```shell
 $ cd <front-end_source_code_folder>
 ```
 
-Edit "gulpfile.babel.js" file to add "open: false" parameter to "server" function:
+Edit _gulpfile.babel.js_ file to add `open: false` parameter to `server` function:
 ```js
 // Start a server with BrowserSync to preview the site in
 function server(done) {
@@ -131,12 +131,12 @@ function server(done) {
 ```
 
 ### Make sure you start with clean NodeJS dependencies
-Remove existing "node_modules" folder, if any (add "sudo" in front of the command if necessary):
+Remove existing _node_modules_ folder, if any (add `sudo` in front of the command if necessary):
 ```shell
 $ rm -rf node_modules
 ```
 
-Execute "yarn" command through the Docker image to get all needed project dependencies (this will generate a fresh "node_modules" folder - do this once at start, then everytime a dependency is added to package.json file):
+Execute `yarn` command through the Docker image to get all needed project dependencies (this will generate a fresh _node_modules_ folder - do this once at start, then everytime a dependency is added to _package.json_ file):
 ```shell
 $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt <REPOSITORY_name> yarn
 ```
@@ -149,14 +149,14 @@ $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt <R
 This Docker image uses Foundation Zurb Template's manual setup (not Foundation CLI).
 See available commands here: https://github.com/zurb/foundation-zurb-template/tree/master#manual-setup
 
-* Execute "yarn start" (Zurb Starter's base command) through the Docker image:
+* Execute `yarn start` (Zurb Starter's base command) through the Docker image:
 ```shell
 $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt <REPOSITORY_name>
 ```
 
-If you've executed this command for the first time, it should have created a "dist" folder at the root of your <front-end_source_code_folder>. This "dist" folder contains your processed front-end assets.
+If you've executed this command for the first time, it should have created a _dist_ folder at the root of your <front-end_source_code_folder>. This _dist_ folder contains your processed front-end assets.
 
-* Execute "yarn run build" to build assets for production through the Docker image:
+* Execute `yarn run build` to build assets for production through the Docker image:
 ```shell
 $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt <REPOSITORY_name> yarn run build
 ```
@@ -166,12 +166,12 @@ $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt <R
 
 * Use Yarn (not NPM) to add dependencies to package.json file: https://yarnpkg.com/lang/en/docs/cli/add/.
 
-* Add new Git repo as dependency into "package.json" file (example with a tagged branch: https://github.com/jquery/jquery-ui/tree/1.12.1):
+* Add new Git repo as dependency into _package.json_ file (example with a tagged branch: https://github.com/jquery/jquery-ui/tree/1.12.1):
 ```shell
 $  docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt <REPOSITORY_name> yarn add jquery/jquery-ui.git#v1.12.1
 ```
 
-* Add new NPM package as dev dependency into "package.json" file (example: https://www.npmjs.com/package/gulp-svg-sprite):
+* Add new NPM package as dev dependency into _package.json_ file (example: https://www.npmjs.com/package/gulp-svg-sprite):
 ```shell
 $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt <REPOSITORY_name> yarn add --dev gulp-svg-sprite
 ```
