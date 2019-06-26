@@ -36,6 +36,10 @@ _more to come..._
 
 * [Remove one or more Docker image(s)](https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks/#removing-docker-images):
 ```shell
+docker image rmi <image_ID>
+```
+or:
+```shell
 docker image rm <image_ID> --force
 ```
 
