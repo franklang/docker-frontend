@@ -178,3 +178,8 @@ $  docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt <
 ```shell
 $ docker run --rm --pid=host -v ~/path/to/<front-end_source_code_folder>:/opt <REPOSITORY_name> npm install --save-dev gulp-svg-sprite
 ```
+
+* Use container for multiple themes
+```shell
+$ docker run --rm --pid=host -v ~/<project_root>/:/opt franklang/fzt64 /bin/bash -c "cd path/to/gulpfile.js && gulp"
+```
