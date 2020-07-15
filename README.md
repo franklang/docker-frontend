@@ -1,3 +1,5 @@
+** As of 2020/07/15: deprecated in favor of https://github.com/franklang/node-docker **
+
 # NodeJS/NPM based Docker images to compile Front-End assets
 
 This project provides Docker images designed to help processing front-end assets without the pain of having to deal with NodeJS/NPM local installation and package version issues.
